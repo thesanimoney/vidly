@@ -1,11 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const customerSchema_1 = require("./customerSchema");
-const rentalSchema = new mongoose_1.default.Schema({
+var mongoose_1 = require("mongoose");
+var customerSchema_1 = require("./customerSchema");
+var rentalSchema = new mongoose_1.default.Schema({
     customer: { type: customerSchema_1.customerSchema },
     course: {
         type: new mongoose_1.default.Schema({
@@ -17,5 +14,5 @@ const rentalSchema = new mongoose_1.default.Schema({
     dateReturned: { type: Date },
     rentalFee: { type: Number, required: true, min: 0 },
 });
-const Rental = mongoose_1.default.model("Rental", rentalSchema);
+var Rental = mongoose_1.default.model("Rental", rentalSchema);
 exports.default = Rental;

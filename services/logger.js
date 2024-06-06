@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.logger = void 0;
-const winston_1 = require("winston");
+var winston_1 = require("winston");
 exports.logger = (0, winston_1.createLogger)({
     format: winston_1.format.combine(winston_1.format.timestamp(), winston_1.format.json(), winston_1.format.colorize()),
     transports: [
