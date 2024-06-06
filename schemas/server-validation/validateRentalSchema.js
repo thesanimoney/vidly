@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validateRentalSchema = void 0;
-var joi_1 = require("joi");
-var rentalSchemaValidation = joi_1.default.object({
-    customerId: joi_1.default.string().required(),
-    courseId: joi_1.default.string().required()
+var Joi = require("joi");
+var rentalSchemaValidation = Joi.object({
+    customerId: Joi.string().required(),
+    courseId: Joi.string().required()
 });
 var validateRentalSchema = function (object) {
     return rentalSchemaValidation.validate(object);

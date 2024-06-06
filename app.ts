@@ -1,5 +1,5 @@
-import express from "express";
-import {port} from "./config/config";
+import express = require('express')
+// import {port} from "./config/config";
 import connectToMongoClient from "./services/mongoConnection";
 import runMiddlewares from "./middleware";
 

@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt';
+import * as bcrypt from 'bcrypt';
 
 export default async function comparePasswords(userInputPassword: string, storedHashedPassword: string): Promise<boolean> {
     try {

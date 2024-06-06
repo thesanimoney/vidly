@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import registerUser from "../controllers/users/registerUser";
 import loginUser from "../controllers/users/loginUser";
 import auth from "../middleware/auth";

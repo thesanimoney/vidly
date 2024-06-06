@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.usersRouter = void 0;
-var express_1 = require("express");
+var express = require("express");
 var registerUser_1 = require("../controllers/users/registerUser");
 var loginUser_1 = require("../controllers/users/loginUser");
 var auth_1 = require("../middleware/auth");
 var getUserInfo_1 = require("../controllers/users/getUserInfo");
-exports.usersRouter = express_1.default.Router();
+exports.usersRouter = express.Router();
 exports.usersRouter.post("/register/", function (req, res) {
     return (0, registerUser_1.default)(req, res);
 });

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = require("mongoose");
-var jsonwebtoken_1 = require("jsonwebtoken");
+var jwt = require("jsonwebtoken");
 var config_1 = require("../../config/config");
 var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 var userSchema = new mongoose_1.default.Schema({
@@ -24,7 +24,7 @@ var userSchema = new mongoose_1.default.Schema({
     }
 });
 userSchema.methods.generateAuthToken = function () {
-    return jsonwebtoken_1.default.sign({ email: this.email, name: this.name, id: this._id, isAdmin: this.isAdmin }, config_1.jwtSecret);
+    return jwt.sign({ email: this.email, name: this.name, id: this._id, isAdmin: this.isAdmin }, config_1.jwtSecret);
 };
 var User = mongoose_1.default.model("User", userSchema);
 exports.default = User;

@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var bcrypt_1 = require("bcrypt");
+var bcrypt = require("bcrypt");
 var saltRounds = 10;
 function hashPassword(password) {
     return __awaiter(this, void 0, void 0, function () {
@@ -45,10 +45,10 @@ function hashPassword(password) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 3, , 4]);
-                    return [4 /*yield*/, bcrypt_1.default.genSalt(saltRounds)];
+                    return [4 /*yield*/, bcrypt.genSalt(saltRounds)];
                 case 1:
                     salt = _a.sent();
-                    return [4 /*yield*/, bcrypt_1.default.hash(password, salt)];
+                    return [4 /*yield*/, bcrypt.hash(password, salt)];
                 case 2: return [2 /*return*/, _a.sent()];
                 case 3:
                     err_1 = _a.sent();

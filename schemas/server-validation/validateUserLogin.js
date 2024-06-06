@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validateUserLogin = void 0;
-var joi_1 = require("joi");
-var userLoginValidation = joi_1.default.object({
-    password: joi_1.default.string().required().min(6).max(1024),
-    email: joi_1.default.string().required().email()
+var Joi = require("joi");
+var userLoginValidation = Joi.object({
+    password: Joi.string().required().min(6).max(1024),
+    email: Joi.string().required().email()
 });
 var validateUserLogin = function (object) {
     return userLoginValidation.validate(object);

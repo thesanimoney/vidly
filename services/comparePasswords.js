@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var bcrypt_1 = require("bcrypt");
+var bcrypt = require("bcrypt");
 function comparePasswords(userInputPassword, storedHashedPassword) {
     return __awaiter(this, void 0, void 0, function () {
         var err_1;
@@ -44,7 +44,7 @@ function comparePasswords(userInputPassword, storedHashedPassword) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, bcrypt_1.default.compare(userInputPassword, storedHashedPassword)];
+                    return [4 /*yield*/, bcrypt.compare(userInputPassword, storedHashedPassword)];
                 case 1: return [2 /*return*/, _a.sent()];
                 case 2:
                     err_1 = _a.sent();

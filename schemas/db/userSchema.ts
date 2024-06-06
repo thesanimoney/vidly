@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 import {jwtSecret} from "../../config/config";
 
 interface IUser {

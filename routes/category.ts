@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import addCategory from "../controllers/categories/addCategory";
 import deleteCategory from "../controllers/categories/deleteCategory";
 

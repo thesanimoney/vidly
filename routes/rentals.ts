@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import addRental from "../controllers/rentals/addRental";
 import getRentals from "../controllers/rentals/getRentals";
 

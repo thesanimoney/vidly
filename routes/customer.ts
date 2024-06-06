@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import getCustomers from "../controllers/customers/getCustomers";
 import addCustomer from "../controllers/customers/addCustomers";
 import deleteCustomer from "../controllers/customers/deleteCustomer";

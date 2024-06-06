@@ -1,5 +1,5 @@
 import {NextFunction, Response, Request} from "express";
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 import {jwtSecret} from "../config/config";
 
 export default function auth(req: Request, res: Response, next: NextFunction) {

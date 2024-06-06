@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import getCourses from "../controllers/courses/getCourses";
 import addCourse from "../controllers/courses/addCourse";
 import deleteCourse from "../controllers/courses/deleteCourse";

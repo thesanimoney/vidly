@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import addAuthor from "../controllers/authors/addAuthor";
 import deleteAuthor from "../controllers/authors/deleteAuthor";
 

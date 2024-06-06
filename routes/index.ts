@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import { customerRouter } from "./customer";
 import { coursesRouter } from "./course";
 import { authorsRouter } from "./author";
