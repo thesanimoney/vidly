@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const customer_1 = require("./customer");
+const course_1 = require("./course");
+const author_1 = require("./author");
+const category_1 = require("./category");
+const rentals_1 = require("./rentals");
+const user_1 = require("./user");
+const router = express_1.default.Router();
+router.use(customer_1.customerRouter);
+router.use(course_1.coursesRouter);
+router.use(author_1.authorsRouter);
+router.use(category_1.categoryRouter);
+router.use(rentals_1.rentalsRouter);
+router.use(user_1.usersRouter);
+exports.default = router;
