@@ -11,7 +11,7 @@ import asyncMiddleware from "../middleware/asyncMiddleware";
 export const coursesRouter = express.Router();
 
 coursesRouter.get("/api/courses", (req, res, next: NextFunction) => {
-    return asyncMiddleware(() => getCourses(req, res, next), next)
+    return asyncMiddleware(() => getCourses(req, res), next)
 })
 
 coursesRouter.post("/api/courses", auth, (req, res, next) => {

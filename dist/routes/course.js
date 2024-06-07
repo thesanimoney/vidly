@@ -37,7 +37,7 @@ const isAdmin_1 = __importDefault(require("../middleware/isAdmin"));
 const asyncMiddleware_1 = __importDefault(require("../middleware/asyncMiddleware"));
 exports.coursesRouter = express.Router();
 exports.coursesRouter.get("/api/courses", (req, res, next) => {
-    return (0, asyncMiddleware_1.default)(() => (0, getCourses_1.default)(req, res, next), next);
+    return (0, asyncMiddleware_1.default)(() => (0, getCourses_1.default)(req, res), next);
 });
 exports.coursesRouter.post("/api/courses", auth_1.default, (req, res, next) => {
     return (0, asyncMiddleware_1.default)(() => (0, addCourse_1.default)(req, res), next);

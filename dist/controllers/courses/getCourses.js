@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const courseSchema_1 = require("../../schemas/db/courseSchema");
-function getCourses(req, res, next) {
+function getCourses(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const courses = yield courseSchema_1.Course.find().limit(5).select('-__v');
         return res.status(200).send(courses);
