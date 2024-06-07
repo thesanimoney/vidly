@@ -12,5 +12,5 @@ exports.app = (0, express_1.default)();
 (0, mongoConnection_1.default)();
 (0, middleware_1.default)(exports.app);
 exports.app.listen(config_1.port, () => {
-    console.log('Listening on port... ', config_1.port);
+    console.log('Listening on port.. ', config_1.port);
 });
