@@ -1,10 +1,9 @@
-import cors = require('cors')
-import express = require("express");
-import {Express} from "express";
+import cors from "cors";
+import compression from "compression";
+import express, {Express} from "express";
 import router from "../routes";
 import errorHandling from "./errorHandling";
 import helmet from "helmet";
-import compression = require("compression");
 
 const corsOptions = {
     exposedHeaders: ['x-auth-token'],
